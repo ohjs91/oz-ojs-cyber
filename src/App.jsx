@@ -1,16 +1,15 @@
 import { useState } from 'react';
 import './App.css';
-import Btn from './components/Btn';
+import Layout from './common/Layout';
+import Home from './pages/Home';
+import { Routes, Route } from 'react-router';
 function App() {
   return (
-    <>
-      <Btn type={'line'}>Shop Now</Btn>
-      <Btn type={'line'} color={'white'}>
-        Shop Now
-      </Btn>
-      <Btn type={'bg'}>Buy Now</Btn>
-      <div className="scss_test">scss test</div>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+      </Route>
+    </Routes>
   );
 }
 
