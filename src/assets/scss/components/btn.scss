@@ -22,3 +22,14 @@
   background-color: #000;
   border: 1px solid #000;
 }
+
+.icon-btn {
+  &.size-32 {
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
