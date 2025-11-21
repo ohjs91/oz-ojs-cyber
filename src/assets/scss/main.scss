@@ -1,4 +1,8 @@
-@import 'common/header';
-@import 'common/footer';
-@import 'components/btn';
-@import './reset.scss';
+// @import 'common/header';
+// @import 'common/footer';
+// @import 'components/btn';
+// @import './reset.scss';
+@use 'common/header' as *;
+@use 'common/footer' as *;
+@use 'components/btn' as *;
+@use './reset.scss' as *;
