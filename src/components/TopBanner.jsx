@@ -1,5 +1,6 @@
 import React from 'react';
 import Btn from '../components/Btn';
+import { Link } from 'react-router-dom';
 const TopBanner = () => {
   return (
     <div className="top_banner">
@@ -12,9 +13,9 @@ const TopBanner = () => {
           <span className="bottom_txt">
             Created to change everything for the better. For everyone
           </span>
-          <Btn type={'line'} color={'white'} to={'/shop'}>
+          <Link className="link_btn white_line" to={'/shop'}>
             Shop Now
-          </Btn>
+          </Link>
         </div>
       </div>
     </div>
