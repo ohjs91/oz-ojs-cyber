@@ -1,7 +1,7 @@
 import React from 'react';
 
-const IconBtn = ({ disabled = false, children, size }) => {
-  const buttonClasses = `icon-btn size-${size ? `${size}` : ''}`;
+const IconBtn = ({ disabled = false, children, size, className }) => {
+  const buttonClasses = `icon-btn size-${size ? `${size}` : ''} ${className || ''}`;
   return (
     <button className={buttonClasses} disabled={disabled}>
       {children}

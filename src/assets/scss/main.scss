@@ -2,6 +2,7 @@
 // @import 'common/footer';
 // @import 'components/btn';
 // @import './reset.scss';
+@use 'common/common' as *;
 @use 'common/header' as *;
 @use 'common/footer' as *;
 @use 'common/font' as *;
