@@ -5,10 +5,11 @@ import IconBtn from '../components/IconBtn';
 import CartIcon from '/src/assets/images/svg/Cart.svg?react';
 import FavoritesIcon from '/src/assets/images/svg/Favorites.svg?react';
 import SearchIcon from '/src/assets/images/svg/Search.svg?react';
+import TopBanner from '../components/TopBanner';
 const Home = () => {
   return (
     <>
-      <Btn type={'line'}>Shop Now</Btn>
+      {/* <Btn type={'line'}>Shop Now</Btn>
       <Btn type={'line'} color={'white'}>
         Shop Now
       </Btn>
@@ -21,7 +22,8 @@ const Home = () => {
       </IconBtn>
       <IconBtn size={'32'}>
         <FavoritesIcon />
-      </IconBtn>
+      </IconBtn> */}
+      <TopBanner />
     </>
   );
 };

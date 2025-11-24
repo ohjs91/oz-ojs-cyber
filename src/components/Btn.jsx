@@ -1,7 +1,15 @@
 import React from 'react';
-
-const Button = ({ type, disabled = false, children, color }) => {
+import { Link } from 'react-router-dom';
+const Button = ({ type, disabled = false, children, color, to }) => {
   const buttonClasses = `btn btn-${type}${color ? ` ${color}` : ''}`;
+
+  if (to) {
+    return (
+      <Link to={to} className={buttonClasses}>
+        {children}
+      </Link>
+    );
+  }
   return (
     <button className={buttonClasses} disabled={disabled}>
       {children}

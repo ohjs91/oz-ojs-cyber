@@ -2,15 +2,15 @@
   border-radius: 8px;
 }
 .btn-line {
+  max-width: fit-content;
   padding: 16px 56px;
   border: 1px solid #000;
   font-size: 16px;
   line-height: 24px;
-  background-color: #fff;
+  background-color: transparent;
   &.white {
     border-color: #fff;
     color: #fff;
-    background-color: transparent;
   }
 }
 
