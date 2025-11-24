@@ -4,5 +4,6 @@
 // @import './reset.scss';
 @use 'common/header' as *;
 @use 'common/footer' as *;
+@use 'common/font' as *;
 @use 'components/btn' as *;
 @use './reset.scss' as *;

@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+// 1. Inter Thin (100)
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+// 2. Inter Light (300)
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+// 3. Inter Medium (500)
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+// 4. Inter SemiBold (600)
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+// 5. Inter Bold (700)
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// 6. Inter ExtraBold (800)
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+// 7. Inter Black (900) - 새로운 굵기
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  font-family: 'Inter', sans-serif;
+}
