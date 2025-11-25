@@ -2,15 +2,15 @@
   border-radius: 8px;
 }
 .btn-line {
+  max-width: fit-content;
   padding: 16px 56px;
   border: 1px solid #000;
   font-size: 16px;
   line-height: 24px;
-  background-color: #fff;
+  background-color: transparent;
   &.white {
     border-color: #fff;
     color: #fff;
-    background-color: transparent;
   }
 }
 
@@ -31,5 +31,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+.link_btn {
+  border-radius: 8px;
+  max-width: fit-content;
+  padding: 16px 56px;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: transparent;
+  &.white_line {
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  &.black_line {
+    border: 1px solid #000;
+    color: #000;
   }
 }
