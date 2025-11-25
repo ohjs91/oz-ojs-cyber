@@ -1,23 +1,33 @@
+// 공통 변수 (사용하지 않으셨지만, 구조를 위해 상단에 배치)
 #root {
   min-width: 360px;
 }
+
 .inner {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
   padding: 0 16px;
 }
+
+// 공통 스타일
+.mo_view {
+  display: none;
+}
+
 // 탑 배너
 .top_banner {
   width: 100%;
   height: 632px;
   background: linear-gradient(90.7deg, #211c24 0.64%, #211c24 101%);
+
   .inner {
     height: 100%;
     display: flex;
     align-items: center;
     background: url('../../images/img_top_banner.png') 100% no-repeat;
   }
+
   .top_banner_txt {
     span {
       color: #909090;
@@ -49,16 +59,19 @@
   }
 }
 
-//상품 배너
+// 상품 배너
 .prod_banner {
   height: 600px;
   display: flex;
+
   .prod_banner_area {
     width: 50%;
+
     &:first-of-type {
       display: flex;
       flex-wrap: wrap;
     }
+
     &:last-of-type {
       background: #ededed;
     }
@@ -67,59 +80,82 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 12px 0 0;
+
+      .img_area {
+        margin-right: 6px;
+        flex-shrink: 1;
+      }
+
+      .txt_area {
+        p {
+          max-width: 200px;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 24px;
+          color: #909090;
+          margin-top: 16px;
+        }
+        strong {
+          font-weight: 500; // 공통 기본값
+        }
+        span {
+          font-weight: 300; // airpods/visionpro/macbook span 공통
+        }
+      }
+
+      // 개별 아이템 스타일
       &.playstation {
         width: 100%;
         justify-content: flex-start;
+        padding: 0 12px 0 0;
+
         .txt_area {
           strong {
             font-size: 49px;
             line-height: 40px;
-            font-weight: 500;
           }
         }
       }
-      &.airpods {
+
+      &.airpods,
+      &.visionpro {
         width: 50%;
-        background: #ededed;
+        padding: 0 12px 0 0;
+
         .txt_area {
           strong {
             font-size: 29px;
             line-height: 40px;
-            font-weight: 500;
+
             span {
               display: block;
-              font-weight: 300;
             }
           }
         }
       }
+
+      &.airpods {
+        background: #ededed;
+      }
+
       &.visionpro {
-        width: 50%;
         background: #353535;
         .txt_area {
           color: #fff;
-          strong {
-            font-size: 29px;
-            line-height: 40px;
-            font-weight: 500;
-            span {
-              display: block;
-              font-weight: 300;
-            }
-          }
         }
       }
+
       &.macbook {
         height: 100%;
         flex-direction: row-reverse;
         padding-left: 56px;
         padding-right: 0;
+
         .txt_area {
           strong {
             font-size: 64px;
             line-height: 56px;
-            font-weight: 500;
+
             span {
               display: block;
               font-weight: 100;
@@ -131,44 +167,27 @@
           }
         }
         .img_area {
-          margin-right: 0px;
+          margin-right: 0;
         }
-      }
-      .img_area {
-        margin-right: 6px;
-        flex-shrink: 1;
-      }
-    }
-    .txt_area {
-      p {
-        max-width: 200px;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 24px;
-        color: #909090;
-        margin-top: 16px;
       }
     }
   }
 }
 
-// 공통
-.mo_view {
-  display: none;
-}
-
 // 반응형
 @media (max-width: 1024px) {
-  //공통
+  // 공통 반응형
   .pc_view {
     display: none;
   }
   .mo_view {
     display: block;
   }
-  // 탑 배너
+
+  // 탑 배너 반응형
   .top_banner {
     height: 769px;
+
     .inner {
       padding: 88px 12px 0 12px;
       align-items: flex-start;
@@ -176,53 +195,74 @@
       background: url(/src/assets/images/img_top_banner.png) center 170%
         no-repeat;
       background-size: 343px;
+
       .top_banner_txt {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+
         p {
           font-size: 72px;
         }
       }
     }
   }
-  // 상품 배너
+
+  // 상품 배너 반응형
   .prod_banner {
     flex-direction: column;
     height: auto;
+
     .prod_banner_area {
       width: 100%;
+
       .item_area {
         flex-direction: column;
         padding: 40px 12px;
         text-align: center;
-        &.airpods {
+
+        // item_area 공통 텍스트 스타일
+        .txt_area {
+          margin-top: 6px;
+
+          p {
+            max-width: 100%;
+          }
+          strong {
+            font-size: 34px;
+            line-height: 40px;
+          }
+        }
+
+        // 개별 아이템 스타일 조정
+        &.airpods,
+        &.visionpro {
           width: 100%;
+          padding: 40px 12px; // 중복 제거 후 남은 필수 패딩
+
+          .txt_area strong span {
+            display: inline;
+          }
+        }
+
+        &.airpods {
           order: 0;
           .txt_area {
             color: #000;
-            strong {
-              span {
-                display: inline;
-              }
-            }
           }
         }
+
         &.visionpro {
-          width: 100%;
           order: 1;
           .txt_area {
             color: #fff;
-            strong {
-              span {
-                display: inline;
-              }
-            }
           }
         }
+
         &.playstation {
           order: 2;
+
           .txt_area {
             strong {
               font-size: 34px;
@@ -230,25 +270,18 @@
             }
           }
         }
+
         &.macbook {
           flex-direction: column;
           padding: 40px 12px;
+
           .txt_area {
             color: #000;
-            strong {
-              font-size: 34px;
-              line-height: 40px;
-              span {
-                display: inline;
-              }
+
+            strong span {
+              display: inline;
             }
           }
-        }
-      }
-      .txt_area {
-        margin-top: 6px;
-        p {
-          max-width: 100%;
         }
       }
     }
