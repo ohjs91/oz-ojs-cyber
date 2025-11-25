@@ -1,5 +1,4 @@
 import React from 'react';
-import Btn from '../components/Btn';
 import { Link } from 'react-router-dom';
 const TopBanner = () => {
   return (

@@ -27,10 +27,10 @@ const Header = () => {
           </div>
         </div>
         <div className="my_item_wrap">
-          <IconBtn className="header_search_btn" size={'32'}>
+          <IconBtn size={'32'}>
             <FavoritesIcon />
           </IconBtn>
-          <IconBtn className="header_search_btn" size={'32'}>
+          <IconBtn size={'32'}>
             <CartIcon />
           </IconBtn>
         </div>

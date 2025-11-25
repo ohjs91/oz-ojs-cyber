@@ -40,3 +40,8 @@
     gap: 24px;
   }
 }
+@media (max-width: 1024px) {
+  .header_search {
+    display: none;
+  }
+}
