@@ -1,18 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import PcPlayStationImg from '../assets/Images/img_playstation.png';
-import MoPlayStationImg from '../assets/Images/img_playstation_mo.png';
-import PcAirPodsnImg from '../assets/Images/img_airpodsmax.png';
-import MoAirPodsnImg from '../assets/Images/img_airpodsmax_mo.png';
-import PcVisionProImg from '../assets/Images/img_visionpro.png';
-import MoVisionProImg from '../assets/Images/img_visionpro_mo.png';
-import PcMacBookImg from '../assets/Images/img_macbook.png';
-import MoMacBookImg from '../assets/Images/img_macbook_mo.png';
+import Button from '../components/Button';
+import CartIcon from '/src/assets/images/svg/Cart.svg?react';
+import FavoritesIcon from '/src/assets/images/svg/Favorites.svg?react';
+import SearchIcon from '/src/assets/images/svg/Search.svg?react';
+import {
+  PcPlayStationImg,
+  MoPlayStationImg,
+  PcAirPodsnImg,
+  MoAirPodsnImg,
+  PcVisionProImg,
+  MoVisionProImg,
+  PcMacBookImg,
+  MoMacBookImg,
+} from '../assets/images/index';
 
 const ProdItemsBanner = () => {
   return (
     <div className="prod_banner">
+      {/* <Button uiType={'line'} className={`black`}>
+        Shop Now
+      </Button>
+      <Button uiType={'line'} className={`white`}>
+        Shop Now
+      </Button>
+      <Button uiType={'bg'}>Shop Now</Button>
+      <Button uiType={'icon'}>
+        <CartIcon />
+      </Button> */}
       <div className="prod_banner_area">
         <div className="item_area playstation">
           <div className="img_area">
