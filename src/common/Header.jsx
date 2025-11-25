@@ -27,10 +27,10 @@ const Header = () => {
           </div>
         </div>
         <div className="my_item_wrap">
-          <Button>
+          <Button uiType={'icon'} className={'size-32'}>
             <FavoritesIcon />
           </Button>
-          <Button>
+          <Button uiType={'icon'} className={'size-32'}>
             <CartIcon />
           </Button>
         </div>
