@@ -6,6 +6,7 @@ import CartIcon from '/src/assets/images/svg/Cart.svg?react';
 import FavoritesIcon from '/src/assets/images/svg/Favorites.svg?react';
 import SearchIcon from '/src/assets/images/svg/Search.svg?react';
 import TopBanner from '../components/TopBanner';
+import ProdItemsBanner from '../components/ProdItemsBanner';
 const Home = () => {
   return (
     <>
@@ -24,6 +25,7 @@ const Home = () => {
         <FavoritesIcon />
       </IconBtn> */}
       <TopBanner />
+      <ProdItemsBanner />
     </>
   );
 };
