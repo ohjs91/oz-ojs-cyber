@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import IconBtn from '../components/IconBtn';
+import Button from '../components/Button';
 import SearchIcon from '/src/assets/images/svg/Search.svg?react';
 import CartIcon from '/src/assets/images/svg/Cart.svg?react';
 import FavoritesIcon from '/src/assets/images/svg/Favorites.svg?react';
@@ -21,18 +21,18 @@ const Header = () => {
               type="text"
               placeholder="Search"
             />
-            <IconBtn className="header_search_btn" size={'24'}>
+            <Button className="header_search_btn" size={'24'}>
               <SearchIcon />
-            </IconBtn>
+            </Button>
           </div>
         </div>
         <div className="my_item_wrap">
-          <IconBtn size={'32'}>
+          <Button>
             <FavoritesIcon />
-          </IconBtn>
-          <IconBtn size={'32'}>
+          </Button>
+          <Button>
             <CartIcon />
-          </IconBtn>
+          </Button>
         </div>
       </div>
     </header>
