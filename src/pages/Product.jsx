@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useProducts from '@/hooks/useAxiosProduct';
+import { Link } from 'react-router-dom';
 const Product = () => {
   const { category } = useParams();
 
@@ -31,12 +32,19 @@ const Product = () => {
     <>
       <div>
         <ul>
-          {categoryList.map((item) => {
+          {categoryList?.map((item, index) => {
             return (
-              <li key={item}>
-                <button type="button" onClick={() => loadCategory(item)}>
+              <li key={item + index}>
+                <Link
+                  className=""
+                  to={`/product/${item}`}
+                  onClick={() => loadCategory(item)}
+                >
+                  <span>{item}</span>
+                </Link>
+                {/* <button type="button" onClick={() => loadCategory(item)}>
                   {item}
-                </button>
+                </button> */}
               </li>
             );
           })}
